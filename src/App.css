@@ -1,0 +1,502 @@
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+.container{
+    display:flex;
+}
+main{
+    width: 100%;
+    padding: 20px;
+}
+.sidebar{
+  background: #333;
+    color: #9e9ea4;
+    height: 100vh;
+    width: 200px;
+    transition: all 0.5s;
+}
+.top_section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+}
+.logo{
+    font-size: 30px;
+}
+.bars{
+    display: flex;
+    flex-direction: 'row';
+    font-size: 25px;
+    margin-left: 50px;
+}
+.link{
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+}
+.link:hover{
+    background:lightskyblue;
+    color: #000;
+    transition: all 0.5s;
+}
+.active{
+    background: lightskyblue;
+    color: #000;
+}
+.icon, .link_text{
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1d2634;
+    color: #9e9ea4;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .icon {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 20px;
+  }
+  .icon_header {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 26px;
+  }
+  .icon, .icon_header {
+    margin-right: 5px;
+  }
+  
+  .close_icon {
+    color: red;
+    margin-left: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'sidebar header header header'
+      'sidebar main main main';
+    height: 100vh;
+  }
+  
+
+
+  
+  
+  /* Main  */  
+  .main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 20px;
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .main-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 15px 0;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 15px;
+    border-radius: 5px;
+  }
+  
+  .card:first-child {
+    background-color: #2962ff;
+  }
+  
+  .card:nth-child(2) {
+    background-color: #ff6d00;
+  }
+  
+  .card:nth-child(3) {
+    background-color: #2e7d32;
+  }
+  
+  .card:nth-child(4) {
+    background-color: #d50000;
+  }
+  
+  .card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card-inner > .card_icon {
+    font-size: 25px;
+  }
+  
+  
+  /* End Main  */
+  
+  
+  /* Medium <= 992px */
+    
+  @media screen and (max-width: 992px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        'header'
+        'main';
+    }
+  
+    #sidebar {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: inline;
+    }
+  
+    .sidebar-title > span {
+      display: inline;
+    }
+  }
+  /* Small <= 768px */
+    
+  @media screen and (max-width: 768px) {
+    .main-cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+  
+    .charts {
+      grid-template-columns: 1fr;
+      margin-top: 30px;
+    }
+  }
+  
+  /* Extra Small <= 576px */
+  
+  @media screen and (max-width: 576px) {
+    .hedaer-left {
+      display: none;
+    }
+  }
+  .App {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .attack-form {
+    background-color: #1d2634;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(5, 5, 5);
+  }
+  
+  .attack-form input,
+  .attack-form select,
+  .attack-form button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .attack-form button {
+    cursor: pointer;
+  }
+  .App {
+  text-align: center;
+  background-color: #1d2634;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-container {
+  margin-top: 20px;
+}
+
+.main-title {
+  margin-bottom: 20px;
+}
+
+.main-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  margin: 10px;
+  text-align: left;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.graph-container {
+  margin-top: 40px;
+}
+body {
+  background-color: #2E3B55;
+  color: #ffffff;
+}
+
+.AppBar {
+  background-color: #1A2330;
+}
+
+.Paper {
+  background-color:#3E4B67;
+}
+
+.Button {
+  background-color: #586C94;
+  color: #ffffff;
+}
+
+input, select, button {
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+/* src/Keylogger.css */
+.keylogger-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.keylogger-container h1 {
+  color: #333;
+}
+
+.keylogger-container button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.keylogger-container .logs {
+  width: 80%;
+  height: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  white-space: pre-wrap; /* Maintain whitespace */
+  overflow-y: scroll;
+  background-color: #f9f9f9;
+}
+
+.status {
+  margin: 20px;
+  font-size: 18px;
+  color: green;
+}
+/* src/theme.css */
+:root {
+  --primary-color:  #2962ff; /* Blue */
+  --secondary-color: #D32F2F; /* Red */
+  --background-color: #1A2330;
+  --text-color: #000000; /* Black */
+  --button-hover-color: #2962ff; /* Darker Blue */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+.keylogger-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.keylogger-container h1 {
+  color: var(--primary-color);
+}
+
+.keylogger-container button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+
+.keylogger-container button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.keylogger-container button:active {
+  background-color: var(--secondary-color);
+}
+
+.keylogger-container .logs {
+  width: 80%;
+  height: 300px;
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  margin-top: 20px;
+  white-space: pre-wrap; /* Maintain whitespace */
+  overflow-y: scroll;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.status {
+  margin: 20px;
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+/* src/Sidebar.css */
+.sidebar {
+  background-color: #1d2634;
+  color: #9e9ea4;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.bars {
+  display: flex;
+  flex-direction: 'row';
+  font-size: 25px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+.link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.active {
+  background: lightskyblue;
+  color: #000;
+}
+
+.icon, .link_text {
+  font-size: 20px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2e7d32;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  
+  color: orange;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button:not(:disabled):hover {
+  background-color: #3f51b5;
+  color:rgb(255, 255, 255);
+}
+
+button:disabled > .MuiCircularProgress-root {
+  color: white;
+}
+
